@@ -2,7 +2,7 @@
 var words = [
     "伤心桥下春波绿",
     "曾是惊鸿照影来",
-    "当年明月在",
+    "当时明月在",
     "曾照彩云归",
     "归去来兮",
     "真堪偕隐",
@@ -73,6 +73,17 @@ function randomNum(min, max) {
     return num;
 }
 function init() {
+    let controller = document.getElementById("controller");
+    let music = document.getElementById("music");
+    controller.addEventListener("click", function () {
+        if (music.paused) {
+            music.play();
+            controller.style.backgroundImage = "url(./img/pause.png)";
+        } else {
+            music.pause();
+            controller.style.backgroundImage = "url(./img/play.png)";
+        }
+    });
     let container = document.querySelector(".container");
     let f = document.createDocumentFragment();
     words.forEach((w) => {
@@ -120,4 +131,3 @@ window.addEventListener("load", init);
 //         texttwo.innerHTML = '但偏偏，风渐渐';
 //         textthree.innerHTML = '把距离吹的好远';
 //       },112500)
-

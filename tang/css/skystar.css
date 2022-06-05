@@ -39,6 +39,20 @@ body {
 div {
     transform-style: preserve-3d;
 }
+#controller {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: 15%;
+    left:  15px;
+    background: url(../img/play.png);
+    background-size: contain;
+}
+#controller:hover{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
 .word-box,
 .word-box .word{
 position: absolute;
